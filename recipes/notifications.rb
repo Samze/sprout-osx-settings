@@ -11,6 +11,6 @@ domains.each do |domain|
     domain domain
     key 'dndMirroring'
     boolean prefs['dndMirroring']
-    only_if { prefs['dndMirroring'] }
+    only_if { prefs.keys.include?('dndMirroring') }
   end
 end
